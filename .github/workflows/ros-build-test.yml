@@ -18,7 +18,7 @@ jobs:
     # environment: regular Ubuntu with a vanilla ROS container
     runs-on: ubuntu-latest
     container: 
-      image: ros:noetic
+      image: ros:jazzy
 
     steps:
     - name: Environment Info
@@ -30,7 +30,7 @@ jobs:
     - name: System deps
       run: |
         apt-get update
-        apt-get install -y git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev checkinstall wget rsync
+        apt-get -yq --no-install-recommends install git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev checkinstall wget rsync
 
     - uses: actions/checkout@v2
       with: 
