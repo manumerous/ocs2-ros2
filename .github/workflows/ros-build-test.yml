@@ -1,4 +1,4 @@
-name: Build and Test OCS2
+name: Build and Test OCS2 using Ros Noetic
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
     - name: System deps
       run: |
         apt-get update
-        apt-get install -y git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev checkinstall wget rsync
+        apt-get -yq --no-install-recommends install git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev checkinstall wget rsync
 
     - uses: actions/checkout@v2
       with: 
