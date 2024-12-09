@@ -1,4 +1,4 @@
-name: Build and Test OCS2
+name: Build and Test OCS2 using Ros Noetic
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
     # environment: regular Ubuntu with a vanilla ROS container
     runs-on: ubuntu-latest
     container: 
-      image: ros:jazzy
+      image: ros:noetic
 
     steps:
     - name: Environment Info
